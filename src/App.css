@@ -1,0 +1,7 @@
+/* src/index.css or App.css */
+html, body {
+  overflow: hidden;  /* Disable scrolling */
+  height: 100%;      /* Ensure the body and html take up full height */
+  margin: 0;         /* Remove default margin */
+}
+

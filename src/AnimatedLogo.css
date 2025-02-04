@@ -1,0 +1,60 @@
+/* src/AnimatedLogo.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full viewport height */
+  width: 100vw;   /* Full viewport width */
+  background-color: #282c34;
+  position: relative;
+}
+
+.letter-s {
+  font-size: 100px;
+  font-family: "Grenze Gotisch", serif;
+  color: #619efb;
+  font-weight: bold;
+  position: absolute;  /* Position "S" absolutely */
+  top: 28%;  /* Center the "S" vertically */
+  left: 46.5%;  /* Center the "S" horizontally */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.word-stylo {
+  display: flex;
+  font-size: 40px;
+  color: transparent; /* Make text transparent so gradient is visible */
+  font-weight: bold;
+  position: absolute;
+  top: 55%;  /* Position below the "S" letter */
+  transform: translateX(-50%);  /* Center the word horizontally */
+  left: 50%;
+  background-image: linear-gradient(90deg, #ff7e5f, #feb47b, #61dafb, #00c6ff); /* Gradient background */
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text; /* Clip the background to text */
+  animation: gradientShift 1.3s infinite alternate; /* Animate gradient shift */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 100% 0;   
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+.letter {
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.underline {
+  background-color: #61dafb;
+  height: 3px;
+  position: absolute;
+  top: 90%;  /* Positioned below the word "STYLO" */
+  left: 0;
+}
